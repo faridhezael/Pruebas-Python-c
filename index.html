@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/litera/bootstrap.min.css">
+
+    <title>Google Farid</title>
+
+
+<!-- Autenticar con Google Cloud firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+apiKey: "AIzaSyAT_yltaBHtrKdXV4Wn3N-8CfBIcRVFx0A",
+authDomain: "trusty-courage-232600.firebaseapp.com",
+databaseURL: "https://trusty-courage-232600.firebaseio.com",
+projectId: "trusty-courage-232600",
+storageBucket: "trusty-courage-232600.appspot.com",
+messagingSenderId: "578513493719"
+};
+firebase.initializeApp(config);
+</script>
+
+
+
+
+
+  </head>
+  <body>
+
+  	<div style="background-color: #0d5ea9; padding: 10px">
+  		<img src="https://www.uvaq.edu.mx/media/images/assets/logo_0001_Layer-1-copy.png?v=5c71693b6c4fb" width="120px">
+  	</div>
+
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="modal" data-target="#exampleModal" href="#">Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="modal" data-target="#exampleModal2" href="#">Registro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true" onclick="cerrar()">Cerrar sesión</a>
+        </li>
+      </ul>
+
+
+
+    <div class="jumbotron text-center" style="">
+      <h1 class="display-3">Farid hezael Celaya Torres Sábado 31 de Agosto 2019 10:45 p.m.</h1>
+      <p class="lead">Firebase</p>
+      <hr class="my-4">
+      <h5>Firebase</h5>
+      <br>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Más información</a>
+      </p>
+    </div>
+
+
+
+<!-- Modal Iniciar Sesión-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+       <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Correo</label>
+          <input id="email2" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Contraseña</label>
+          <input id="contrasena2" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button onclick="ingresar()" class="btn btn-primary">Ingresar</button>
+      </form>
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Registro-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Regis</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+       <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Correo</label>
+          <input id="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Contraseña</label>
+          <input id="contrasena" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button onclick="registrar()" class="btn btn-primary">Ingresar</button>
+      </form>
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
